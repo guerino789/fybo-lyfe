@@ -1,6 +1,6 @@
 import React from "react";
 
-function DockList() {
+function Dock() {
     return (
         <div>
             <h1>Docking</h1>
@@ -8,4 +8,4 @@ function DockList() {
     )
 }
 
-export default DockList
+export default Dock

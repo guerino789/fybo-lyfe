@@ -1,5 +1,5 @@
 import React from "react";
-import DockList from "./components/DockList";
+import DockList from "./components/Dock";
 import VesselList from "./components/VessleList";
 
 function App() {
