@@ -3,16 +3,16 @@
     {
       "id": 1,
       "vessleName": "snap",
-      "vessle length": "100",
-      "captains name": "john doe",
-      "project manager": "ron smith"
+      "vessleLength": "100",
+      "captainsName": "john doe",
+      "projectManager": "ron smith"
     },
     {
       "id": 2,
       "vessleName": "perfect",
-      "vessle length": "200",
-      "captains name": "adam west",
-      "project manager": "tyler smith"
+      "vessleLength": "200",
+      "captainsName": "adam west",
+      "projectManager": "tyler smith"
     },
     {
       "vessleName": "test1",
@@ -27,6 +27,20 @@
       "captinsName": "test2",
       "projectManager": "test2",
       "id": 4
+    },
+    {
+      "vessleName": "test3",
+      "vessleLength": "200",
+      "captinsName": "test3",
+      "projectManager": "test3",
+      "id": 5
+    },
+    {
+      "vessleName": "test4",
+      "vessleLength": "300",
+      "captinsName": "test4",
+      "projectManager": "test4",
+      "id": 6
     }
   ]
 }

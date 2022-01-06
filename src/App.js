@@ -1,14 +1,22 @@
 import React from "react"
+import Navbar from "./components/NavBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import VesselList from "./components/VessleList";
-import AddVessle from "./components/AddVessle"
+import ViewVessle from "./components/ViewVessle"
 
 function App() {
 
   return (
-    <div>
-      <VesselList />
 
-    </div>
+    <Router>
+      <Navbar />
+      <VesselList />
+      <Switch>
+        <Route path="/:vessleId">
+          <ViewVessle />
+        </Route>
+      </Switch>
+    </Router>
 
 
   );

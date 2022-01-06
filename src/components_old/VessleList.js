@@ -2,7 +2,7 @@ import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import AddVessle from "./AddVessle";
-import VessleListEntry from "./VessleListEntry"
+import Vessle from "./Vessle";
 
 
 
@@ -44,10 +44,10 @@ function VesselList() {
             <ul className="Vessles">
                 {vessles.map((vessle) => (
 
-                    <VessleListEntry
+                    <Vessle
                         key={vessle.id}
                         vessle={vessle}
-
+                    // vessles={vessles}
 
                     />
 
