@@ -16,7 +16,7 @@ function VesselList() {
     const [vessles, setVessles] = useState([])
 
     const match = useRouteMatch();
-    console.log(match)
+
 
 
 
@@ -36,6 +36,8 @@ function VesselList() {
 
 
 
+
+
     return (
         <div>
             <AddVessle onAddVessle={handleAddVessle} />
@@ -47,8 +49,6 @@ function VesselList() {
                     <VessleListEntry
                         key={vessle.id}
                         vessle={vessle}
-
-
                     />
 
                 ))}

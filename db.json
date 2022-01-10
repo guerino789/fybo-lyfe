@@ -8,39 +8,11 @@
       "projectManager": "ron smith"
     },
     {
-      "id": 2,
-      "vessleName": "perfect",
-      "vessleLength": "200",
-      "captainsName": "adam west",
-      "projectManager": "tyler smith"
-    },
-    {
-      "vessleName": "test1",
-      "vessleLength": "100",
-      "captinsName": "test1",
-      "projectManager": "test1",
-      "id": 3
-    },
-    {
-      "vessleName": "test2",
-      "vessleLength": "200",
-      "captinsName": "test2",
-      "projectManager": "test2",
-      "id": 4
-    },
-    {
       "vessleName": "test3",
       "vessleLength": "200",
       "captinsName": "test3",
       "projectManager": "test3",
       "id": 5
-    },
-    {
-      "vessleName": "test4",
-      "vessleLength": "300",
-      "captinsName": "test4",
-      "projectManager": "test4",
-      "id": 6
     }
   ]
 }

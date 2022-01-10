@@ -1,8 +1,8 @@
-import React from "react";
-import { Route, useRouteMatch } from "react-router-dom";
-import { useEffect, useState } from "react";
-import AddVessle from "./AddVessle";
-import Vessle from "./Vessle";
+// import React from "react";
+// import { Route, useRouteMatch } from "react-router-dom";
+// import { useEffect, useState } from "react";
+// import AddVessle from "./AddVessle";
+// import Vessle from "./Vessle";
 
 
 
@@ -11,51 +11,50 @@ import Vessle from "./Vessle";
 
 
 
-function VesselList() {
+// function VesselList() {
 
-    const [vessles, setVessles] = useState([])
+//     const [vessles, setVessles] = useState([])
 
-    const match = useRouteMatch();
-    console.log(match)
-
+//     const match = useRouteMatch();
 
 
-    useEffect(() => {
-        fetch("http://localhost:3001/vessles")
-            .then((resp) => resp.json())
-            .then(vessles => setVessles(vessles))
-    }, [])
-
-    function handleAddVessle(newVessle) {
-        setVessles([...vessles, newVessle])
-    }
 
 
+//     useEffect(() => {
+//         fetch("http://localhost:3001/vessles")
+//             .then((resp) => resp.json())
+//             .then(vessles => setVessles(vessles))
+//     }, [])
+
+//     function handleAddVessle(newVessle) {
+//         setVessles([...vessles, newVessle])
+//     }
 
 
 
 
 
-    return (
-        <div>
-            <AddVessle onAddVessle={handleAddVessle} />
-            <br />
 
-            <ul className="Vessles">
-                {vessles.map((vessle) => (
 
-                    <Vessle
-                        key={vessle.id}
-                        vessle={vessle}
-                    // vessles={vessles}
+//     return (
+//         <div>
+//             <AddVessle onAddVessle={handleAddVessle} />
 
-                    />
+//             <ul className="Vessles">
+//                 {vessles.map((vessle) => (
 
-                ))}
-            </ul>
+//                     <Vessle
+//                         key={vessle.id}
+//                         vessle={vessle}
+//                     // vessles={vessles}
 
-        </div>
-    )
-}
+//                     />
 
-export default VesselList
+//                 ))}
+//             </ul>
+
+//         </div>
+//     )
+// }
+
+// export default VesselList
