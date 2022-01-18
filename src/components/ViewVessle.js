@@ -1,32 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-
-function ViewVessle() {
-
-    const [vessleInfo, setVessleInfo] = useState([])
-    console.log(vessleInfo)
-
-    const params = useParams();
+import React from "react";
+import { useRouteMatch } from "react-router-dom";
 
 
-    useEffect(() => {
-        fetch(`http://localhost:3001/vessles/${params.vessleId}`)
-            .then(resp => resp.json())
-            .then(data => setVessleInfo(data))
-    }, [params.vessleId])
+
+function ViewVessle({ handleDeleteVessle, vessle }) {
+
+
+
 
     function handleDeleteClick() {
-        fetch(`http://localhost:3001/vessles/${params.vessleId}`, {
+        fetch(`http://localhost:3001/vessles/${vessle.id}`, {
             method: "DELETE",
         })
             .then((resp) => resp.json())
-            .then(() => handleDeleteVessle(vessleInfo))
+            .then(() => handleDeleteVessle(vessle.id))
     }
 
-    function handleDeleteVessle(deletedVessle) {
-        const updatedVessles = vessleInfo.filter((vessle) => vessle.id !== deletedVessle.id);
-        setVessleInfo(updatedVessles);
-    }
+
 
 
 
@@ -36,10 +26,10 @@ function ViewVessle() {
 
     return (
         <div>
-            <div>{vessleInfo.vessleName}</div>
-            <div>{vessleInfo.vessleLength}</div>
-            <div>{vessleInfo.captainsName}</div>
-            <div>{vessleInfo.projectManager}</div>
+            <div>{vessle.vessleName}</div>
+            <div>{vessle.vessleLength}</div>
+            <div>{vessle.captainsName}</div>
+            <div>{vessle.projectManager}</div>
             <button className="remove" onClick={handleDeleteClick}>
                 Delete
             </button>

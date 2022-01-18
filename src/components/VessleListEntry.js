@@ -1,25 +1,24 @@
 import React from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
-function VessleListEntry({ vessle }) {
-
-    const match = useRouteMatch();
+function VessleListEntry({ vessles }) {
 
 
+
+    const render = Object.keys(vessles).map((vessleID) => (
+        <li key={vessleID}>
+            <Link to={`/vessles/${vessleID}`}>{vessles[vessleID].vessleName}</Link>
+        </li>
+    ))
 
     return (
-
-        <li >
-            <Link to={`/${vessle.id}`}>
-                <span>{vessle.vessleName}</span>
-                <span>{vessle.vessleLength}</span>
-            </Link>
-        </li>
-
-
+        <div>
+            <ul>{render}</ul>
+        </div>
     )
+
 }
 
 

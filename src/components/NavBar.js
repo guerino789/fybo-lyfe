@@ -7,6 +7,8 @@ function NavBar() {
     return (
         <div>
             <Link to="/">Home</Link>
+
+            <Link to="/vessles">Vessles</Link>
         </div>
     )
 }

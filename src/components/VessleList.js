@@ -1,8 +1,7 @@
 import React from "react";
-import { Route, useRouteMatch } from "react-router-dom";
+import { Route, useRouteMatch, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import AddVessle from "./AddVessle";
-import VessleListEntry from "./VessleListEntry"
 
 
 
@@ -11,24 +10,22 @@ import VessleListEntry from "./VessleListEntry"
 
 
 
-function VesselList() {
 
-    const [vessles, setVessles] = useState([])
+
+function VesselList({ onAddVessle, vessles }) {
+
+
 
     const match = useRouteMatch();
+    console.log(match)
 
 
+    const render = Object.keys(vessles).map((vessleID) => (
+        <li key={vessleID}>
+            <Link to={`/vessles/${vessleID}`}>{vessles[vessleID].vessleName}</Link>
+        </li>
+    ))
 
-
-    useEffect(() => {
-        fetch("http://localhost:3001/vessles")
-            .then((resp) => resp.json())
-            .then(vessles => setVessles(vessles))
-    }, [])
-
-    function handleAddVessle(newVessle) {
-        setVessles([...vessles, newVessle])
-    }
 
 
 
@@ -40,22 +37,25 @@ function VesselList() {
 
     return (
         <div>
-            <AddVessle onAddVessle={handleAddVessle} />
+            <AddVessle onAddVessle={onAddVessle} />
+
             <br />
 
-            <ul className="Vessles">
-                {vessles.map((vessle) => (
+            <ul className="Vessles">{render}</ul>
 
-                    <VessleListEntry
-                        key={vessle.id}
-                        vessle={vessle}
-                    />
-
-                ))}
-            </ul>
 
         </div>
     )
 }
 
 export default VesselList
+
+
+// {vessles.map((vessle) => (
+//                     <Route key={vessle.id} path={`${match.url}/:vessleId`}>
+//                         <VessleListEntry
+//                             key={vessle.id}
+//                             vessles={vessles}
+//                         />
+//                     </Route>
+//                 ))}
