@@ -1,0 +1,58 @@
+import React, { useEffect } from "react";
+import { useParams, useHistory } from "react-router-dom";
+
+
+
+function ViewVessle({ handleDeleteVessle, vessles }) {
+
+
+
+    const params = useParams()
+
+    // console.log(params)
+    const id = parseInt(params.vessleId)
+
+    const history = useHistory()
+
+
+
+
+
+
+    function handleDeleteClick() {
+
+        fetch(`http://localhost:3001/vessles/${vessle.id}`, {
+            method: "DELETE",
+        })
+
+            .then(() => handleDeleteVessle(vessle))
+            .then(() => history.push("/vessles"))
+
+
+    }
+    const vessle = vessles.find((vessle) => (
+        vessle.id === id
+    )) || {}
+
+
+
+
+
+
+
+
+
+    return (
+        <div>
+            <h1>{vessle.vessleName}</h1>
+            <h1>{vessle.vessleLength}</h1>
+            <h1>{vessle.captinsName}</h1>
+            <h1>{vessle.projectManager}</h1>
+            <button onClick={handleDeleteClick}> Delete</button>
+
+        </div>
+
+    )
+}
+
+export default ViewVessle

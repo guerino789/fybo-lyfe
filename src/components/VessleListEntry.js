@@ -3,20 +3,19 @@ import { Link } from "react-router-dom";
 
 
 
-function VessleListEntry({ vessles }) {
+function VessleListEntry({ vessle }) {
 
 
 
-    const render = Object.keys(vessles).map((vessleID) => (
-        <li key={vessleID}>
-            <Link to={`/vessles/${vessleID}`}>{vessles[vessleID].vessleName}</Link>
-        </li>
-    ))
+
+
+
+
 
     return (
-        <div>
-            <ul>{render}</ul>
-        </div>
+        <li key={vessle.id}>
+            <Link to={`/vessles/${vessle.id}`}>{vessle.vessleName}</Link>
+        </li>
     )
 
 }

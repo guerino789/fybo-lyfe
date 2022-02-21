@@ -1,4 +1,7 @@
 import react, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom"
+import onAddVessle from "../pages/AddVesslePage"
+    ;
 
 
 
@@ -12,6 +15,9 @@ function AddVessle({ onAddVessle }) {
     const [vessleLength, setVessleLength] = useState("");
     const [captinsName, setCaptinsName] = useState("");
     const [projectManager, setProjectManager] = useState("");
+
+    const history = useHistory()
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -32,9 +38,9 @@ function AddVessle({ onAddVessle }) {
         })
             .then((resp) => resp.json())
             .then((newVessle) => onAddVessle(newVessle))
+            .then(history.push("/vessles"))
 
     }
-
     return (
         <form className="NewVessle" onSubmit={handleSubmit} >
             <label>

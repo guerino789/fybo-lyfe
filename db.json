@@ -1,13 +1,6 @@
 {
   "vessles": [
     {
-      "vessleName": "test1",
-      "vessleLength": "100",
-      "captinsName": "test1",
-      "projectManager": "test1",
-      "id": 1
-    },
-    {
       "vessleName": "test2",
       "vessleLength": "200",
       "captinsName": "test2",
@@ -15,10 +8,10 @@
       "id": 2
     },
     {
-      "vessleName": "test3",
-      "vessleLength": "125",
-      "captinsName": "test3",
-      "projectManager": "test3",
+      "vessleName": "test4",
+      "vessleLength": "400",
+      "captinsName": "test4",
+      "projectManager": "test4",
       "id": 3
     }
   ]
