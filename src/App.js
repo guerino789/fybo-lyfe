@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from "./components/NavBar";
-import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import VessleShow from "./pages/VessleShow"
 import Home from "./pages/Home";
@@ -12,8 +12,8 @@ function App() {
   const [vessles, setVessles] = useState([])
 
 
-  const match = useRouteMatch()
-  console.log(match)
+
+
 
 
 

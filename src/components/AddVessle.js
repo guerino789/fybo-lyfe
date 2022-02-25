@@ -1,7 +1,7 @@
 import react, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom"
 import onAddVessle from "../pages/AddVesslePage"
-    ;
+
 
 
 
@@ -29,7 +29,7 @@ function AddVessle({ onAddVessle }) {
 
         };
         console.log(vessleData)
-        fetch("http://localhost:3001/vessles", {
+        fetch("/vessles", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -83,9 +83,10 @@ function AddVessle({ onAddVessle }) {
                 />
             </label>
 
-            <button type="submit">Add to Marina</button>
+            <button type="submit" >Add Vessle</button>
         </form>
     );
+
 }
 
 export default AddVessle

@@ -5,14 +5,7 @@
       "vessleLength": "200",
       "captinsName": "test2",
       "projectManager": "test2",
-      "id": 2
-    },
-    {
-      "vessleName": "test4",
-      "vessleLength": "400",
-      "captinsName": "test4",
-      "projectManager": "test4",
-      "id": 3
+      "id": 5
     }
   ]
 }
