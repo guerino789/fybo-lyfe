@@ -26,23 +26,7 @@ function App() {
       .then(vessles => setVessles(vessles))
   }, [])
 
-  // async function handleAddVessle(vessleData) {
 
-  //   //   const resp = await fetch("/vessles", {
-  //   //     method: "POST",
-  //   //     headers: {
-  //   //       "Content-Type": "application/json",
-  //   //     },
-  //   //     body: JSON.stringify(vessleData),
-  //   //   })
-  //   //   if (!resp.ok) {
-  //   //     console.error('error adding ' + vessleData)
-  //   //     return false
-  //   //   }
-  //   //   const newVessle = await resp.json()
-  //   //   setVessles([...vessles, newVessle])
-  //   //   return true
-  //   // }
 
   function handleAddVessle(newVessle) {
     setVessles([...vessles, newVessle])
