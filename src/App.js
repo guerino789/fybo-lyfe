@@ -11,15 +11,6 @@ function App() {
 
   const [vessles, setVessles] = useState([])
 
-
-
-
-
-
-
-
-
-
   useEffect(() => {
     fetch("/vessles")
       .then((resp) => resp.json())
